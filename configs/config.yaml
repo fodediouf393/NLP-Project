@@ -1,0 +1,102 @@
+random_seed: 42
+
+summarization:
+  top_k_sentences: 2
+  min_sentence_words: 5
+  max_sentence_words: 60
+  max_summary_words: 60
+  redundancy_threshold: 0.75
+  use_tfidf: true
+  ngram_range: [1, 2]
+  stop_words: english
+  use_position_bonus: true
+  position_bonus_weight: 0.20
+  use_numeric_bonus: true
+  numeric_bonus_weight: 0.10
+  use_keyword_bonus: true
+  keyword_bonus_weight: 0.25
+  domain_keywords:
+    - runway
+    - rwy
+    - atc
+    - tower
+    - approach
+    - departure
+    - taxi
+    - takeoff
+    - landing
+    - altitude
+    - fl
+    - airport
+    - weather
+    - captain
+    - first officer
+    - crew
+    - turbulence
+    - visibility
+    - clearance
+    - assigned
+    - incorrect
+    - conflict
+    - separation
+    - emergency
+    - traffic
+    - descend
+    - climb
+    - bird strike
+
+textrank:
+  top_k_sentences: 2
+  min_sentence_words: 5
+  max_sentence_words: 60
+  max_summary_words: 60
+  redundancy_threshold: 0.75
+  stop_words: english
+  ngram_range: [1, 2]
+  damping_factor: 0.85
+  similarity_threshold: 0.05
+  max_iter: 100
+  tol: 1.0e-6
+  use_position_bonus: true
+  position_bonus_weight: 0.10
+  use_numeric_bonus: true
+  numeric_bonus_weight: 0.10
+  use_keyword_bonus: true
+  keyword_bonus_weight: 0.20
+  domain_keywords:
+    - runway
+    - rwy
+    - atc
+    - tower
+    - approach
+    - departure
+    - taxi
+    - takeoff
+    - landing
+    - altitude
+    - fl
+    - airport
+    - weather
+    - captain
+    - first officer
+    - crew
+    - turbulence
+    - visibility
+    - clearance
+    - assigned
+    - incorrect
+    - conflict
+    - separation
+    - emergency
+    - traffic
+    - descend
+    - climb
+    - bird strike
+
+data:
+  text_column: narrative
+  summary_column: synopsis
+
+logging:
+  level: INFO
+  log_file: logs/project.log
